@@ -1,6 +1,11 @@
 include_recipe 'openssl::upgrade'
 
-git "#{Chef::Config[:file_cache_path]}/sqlcipher" do
+directory node['sqlcipher']['working_dir'] do
+  owner node['sqlcipher']['git_user']
+  action :create
+end
+
+git node['sqlcipher']['working_dir'] do
   user node['sqlcipher']['git_user']
   repository node['sqlcipher']['repository']
   checkout_branch node['sqlcipher']['version']
