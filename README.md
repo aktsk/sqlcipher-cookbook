@@ -5,9 +5,9 @@ Installs sqlcipher.
 Attributes
 ----------
 
-- sqlcipher['repository'] - Git repository of sqlcipher
-- sqlcipher['version'] - SQLCipher version. ref: [sqlcipher/releases](https://github.com/sqlcipher/sqlcipher/releases)
-- sqlcipher['repository'] - Git access user
+- `sqlcipher['repository']` - Git repository of sqlcipher
+- `sqlcipher['version']` - SQLCipher version. ref: [sqlcipher/releases](https://github.com/sqlcipher/sqlcipher/releases)
+- `sqlcipher['repository']` - Git access user
 
 Default value is [here](https://github.com/csouls/sqlcipher-cookbook/blob/master/attributes/default.rb)
 
