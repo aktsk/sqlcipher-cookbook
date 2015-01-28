@@ -10,9 +10,10 @@ git node['sqlcipher']['working_dir'] do
   repository node['sqlcipher']['repository']
   checkout_branch node['sqlcipher']['version']
   action :checkout
+  notifies :run, 'bash[make_install_sqlcipher]'
 end
 
-bash 'make and install sqlcipher' do
+bash 'make_install_sqlcipher' do
   action :nothing
   flags '-ex'
   cwd node['sqlcipher']['working_dir']
