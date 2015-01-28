@@ -1,5 +1,11 @@
 include_recipe 'openssl::upgrade'
 
+%w(tcl tcl-devel).each do |pname|
+  package pname do
+    action :install
+  end
+end
+
 directory node['sqlcipher']['working_dir'] do
   owner node['sqlcipher']['git_user']
   action :create
