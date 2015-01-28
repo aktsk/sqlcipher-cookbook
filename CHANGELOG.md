@@ -1,6 +1,10 @@
 sqlcipher CHANGELOG
 ===================
 
+1.0.2
+-----
+- [Yusuke Tanaka] - Fix bugs
+
 1.0.1
 -----
 - [Yusuke Tanaka] - Fix permission error if `sqlcipher['git_user']` configuration is not root
