@@ -20,7 +20,8 @@ git node['sqlcipher']['working_dir'] do
 end
 
 bash 'make_install_sqlcipher' do
-  action :nothing
+  action :run
+  not_if "which sqlcipher"
   flags '-ex'
   cwd node['sqlcipher']['working_dir']
   code <<-EOH
