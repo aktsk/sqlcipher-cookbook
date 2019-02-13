@@ -15,6 +15,7 @@ git node['sqlcipher']['working_dir'] do
   user node['sqlcipher']['git_user']
   repository node['sqlcipher']['repository']
   checkout_branch node['sqlcipher']['version']
+  revision node['sqlcipher']['version']
   action :checkout
   notifies :run, 'bash[make_install_sqlcipher]'
 end
